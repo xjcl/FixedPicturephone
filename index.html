@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Picturephone</title>
+    <script src="jquery.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <script src="sweetalert2@10.js"></script>
+    <script src="Canvas.js"></script>
+    <script src="Game.js"></script>
+    <script src="Client.js"></script>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="theme-switcher">
+            <img src="theme.svg">
+        </div>
+        <div class="join-page">
+            <img class="logo" src="logo.svg">
+            <div class="subtitle">totally not bpp&#x2122; by dark</div>
+            <form class="join-form">
+                <div>
+                    <label for="join-input-username">Display Name</label>
+                    <input id="join-input-username" type="text" maxlength="14" placeholder="Enter a name&#x2026;">
+                </div>
+                <div>
+                    <label for="join-input-roomcode">Room Code</label>
+                    <input id="join-input-roomcode" type="text" maxlength="14" placeholder="Enter a room code&#x2026;">
+                </div>
+                <button></button>
+            </form>
+        </div>
+        <div class="game-page">
+            <div class="ping"></div>
+            <div class="game-page-main"></div>
+            <div class="game-page-sidebar">
+                <div class="game-page-sidebar-main"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

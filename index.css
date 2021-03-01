@@ -1,0 +1,572 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+body {
+    margin: 0;
+    color: #000;
+    text-align: center;
+    background-color: #eee;
+}
+
+body.dark {
+    color: #fff;
+    background-color: #333;
+}
+
+* {
+    font-family: "Inter", sans-serif;
+    box-sizing: border-box;
+    line-height: 100%;
+}
+
+.swal2-title {
+    color: #000;
+}
+
+.swal2-content {
+    color: #000;
+}
+
+pre {
+    font-family: monospace;
+    text-align: left;
+    padding: 10px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    white-space: pre-wrap;
+}
+
+.wrapper {
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.theme-switcher {
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 50%;
+    z-index: 5;
+}
+
+body.dark .theme-switcher {
+    background-color: #4E4E4E;
+}
+
+.theme-switcher img {
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    transition: transform 0.6s ease;
+}
+
+body.dark .theme-switcher img {
+    filter: invert(1);
+    transform: rotate(180deg);
+}
+
+.logo {
+    margin-top: 50px;
+    position: relative;
+    width: 700px;
+    max-width: 100%;
+}
+
+body.dark .logo {
+    filter: invert(1);
+}
+
+.subtitle {
+    margin-top: 10px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.join-page {
+    position: relative;
+    top: 0;
+}
+
+.join-form {
+    max-width: 500px;
+    margin: 80px auto;
+}
+
+.join-form>div {
+    padding: 10px 0;
+}
+
+.join-form>div>label {
+    font-size: 28px;
+    padding: 10px 16px;
+    text-align: left;
+    width: 100%;
+    display: inline-block;
+    font-weight: 600;
+}
+
+.join-form>div>input {
+    font-size: 28px;
+    width: 100%;
+    border: 0;
+    outline: 0;
+    background-color: #0002;
+    color: #000;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-weight: 400;
+}
+
+body.dark .join-form>div>input {
+    background-color: #fff;
+}
+
+.join-form>button {
+    margin-top: 30px;
+    font-size: 28px;
+    width: 300px;
+    max-width: 100%;
+    padding: 10px;
+    border: 0;
+    outline: 0;
+    background-color: #0002;
+    color: #000;
+    border-radius: 20px;
+    font-weight: 900;
+    transition: all 0.2s ease;
+}
+
+body.dark .join-form>button {
+    background-color: #fff;
+}
+
+.join-form>button:not(:disabled):hover {
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.join-form>button:disabled {
+    color: #0005;
+}
+
+.game-page {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    top: 0;
+    position: relative;
+}
+
+.ping {
+    position: fixed;
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: 900;
+    text-align: right;
+    top: 8px;
+    right: 18px;
+    z-index: 5;
+    opacity: 0.4;
+}
+
+.game-page-main {
+    flex-grow: 1;
+    padding: 50px 0 0 0;
+    overflow-y: auto;
+    text-align: left;
+    max-height: calc(100vh - 60px);
+}
+
+.game-page-sidebar {
+    position: relative;
+    flex-shrink: 1;
+    padding: 0 0 0 20px;
+    width: 300px;
+}
+
+.game-page-sidebar-main {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #0001;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: left;
+}
+
+body.dark .game-page-sidebar-main {
+    background-color: #fff3;
+}
+
+.game-page-sidebar-main>div {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+    margin-bottom: 40px;
+}
+
+.game-page-sidebar-main>div>div {
+    padding: 2px 0;
+}
+
+.game-page-sidebar-main>div>div>span {
+    opacity: 0.8;
+    font-size: 80%;
+    font-weight: 700;
+}
+
+body.dark .game-page-sidebar-main>div>div>span {
+    opacity: 0.5;
+}
+
+.game-page-sidebar-main>div>button {
+    display: block;
+    font-size: 18px;
+    max-width: 100%;
+    padding: 5px 10px;
+    border: 0;
+    outline: 0;
+    background-color: #000;
+    color: #fff;
+    border-radius: 20px;
+    font-weight: 900;
+    text-align: left;
+    transition: all 0.2s ease;
+    margin: 4px 0;
+}
+
+body.dark .game-page-sidebar-main>div>button {
+    background-color: #333;
+}
+
+.game-page-sidebar-main>div>button:not(:disabled):hover {
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+}
+
+.game-page-sidebar-main>div>button:disabled {
+    opacity: 0.5;
+}
+
+.roomcode-title {
+    color: #000;
+    font-size: 40px;
+    font-weight: 900;
+    word-break: break-all;
+}
+
+.canvas-area {
+    display: flex;
+    width: 700px;
+    max-width: 100%;
+    flex-direction: column;
+    position: relative;
+}
+
+.canvas-area-book-name {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    font-size: 24px;
+}
+
+.canvas-area-canvas {
+    position: relative;
+    display: inline-block;
+    background-color: #fff;
+    margin: 0 0 0 10px;
+    width: 600px;
+    max-width: calc(100% - 20px);
+    border-radius: 5px;
+    box-shadow: 0 0 10px #0005;
+    cursor: none;
+}
+
+body.dark .canvas-area-canvas {
+    box-shadow: 0;
+    margin: 0;
+    max-width: 100%;
+}
+
+.canvas-cursor {
+    position: fixed;
+    transform: translate(-50%, -50%);
+    border: 1px solid #000;
+    border-radius: 50%;
+    pointer-events: none;
+    cursor: none;
+}
+
+.canvas-area-layers {
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 4px;
+    margin: 7px 0;
+}
+
+.canvas-area-layers-add {
+    position: relative;
+    display: inline-block;
+    width: 103px;
+    height: 65px;
+    vertical-align: top;
+    border: 2px solid #0006;
+    margin: 1px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 4px;
+}
+
+.canvas-area-layers-add>span {
+    font-size: 26px;
+    font-weight: 900;
+    margin: 1px 0 0;
+    display: inline-block;
+}
+
+body.dark .canvas-area-layers-add {
+    border-color: #fff;
+}
+
+.canvas-area-layers-layer {
+    position: relative;
+    display: inline-block;
+    width: 103px;
+    height: 65px;
+    vertical-align: top;
+    padding: 0;
+    border: 2px solid #000;
+    background-color: #fff;
+    margin: 1px;
+    font-weight: 900;
+    cursor: default;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+body.dark .canvas-area-layers-layer {
+    background-color: #fffa;
+}
+
+.canvas-area-layers-layer.active {
+    border-color: #f00;
+    background-color: #f003;
+}
+
+body.dark .canvas-area-layers-layer.active {
+    border-color: #fff;
+    background-color: #fff;
+}
+
+.canvas-area-layers-layer>canvas {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+}
+
+.canvas-area-layers-layer-number {
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    width: 20px;
+    height: 20px;
+    background-color: #0009;
+    text-align: center;
+    font-weight: 900;
+    padding-top: 1px;
+    font-size: 16px;
+    color: #fff;
+    z-index: 2;
+    overflow: hidden;
+    border-radius: 0 0 4px 0;
+}
+
+.canvas-area-layers-layer-delete {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #f00b;
+    text-align: center;
+    cursor: pointer;
+    z-index: 2;
+    background-image: url(deletelayer.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 0 0 0 4px;
+}
+
+.canvas-area-layers-layer-move {
+    position: absolute;
+    bottom: 0;
+    height: 37px;
+    width: 20px;
+    cursor: pointer;
+    z-index: 2;
+    background-color: #0009;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 16px;
+    font-weight: 900;
+    color: #fff;
+}
+
+.canvas-area-layers-layer-move-left {
+    left: 0;
+    border-radius: 0 4px 0 0;
+}
+
+.canvas-area-layers-layer-move-right {
+    right: 0;
+    border-radius: 4px 0 0 0;
+}
+
+.canvas-area-layers-layer-delete, .canvas-area-layers-layer-move {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.canvas-area-layers-layer:hover>.canvas-area-layers-layer-delete, .canvas-area-layers-layer:hover>.canvas-area-layers-layer-move {
+    opacity: 1;
+}
+
+.canvas-area-layers-layer-switch-placeholder {
+    position: relative;
+    display: inline-block;
+    width: 103px;
+    vertical-align: top;
+    height: 65px;
+    padding: 2px;
+    border: 2px solid #000;
+    margin: 1px;
+    opacity: 0;
+}
+
+.canvas-area-controls {
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    width: 100%;
+    padding: 4px;
+    background-color: #0004;
+    border-radius: 25px;
+}
+
+body.dark .canvas-area-controls {
+    background-color: #fff9;
+}
+
+.canvas-area-controls-tool {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 0 2px;
+    cursor: pointer;
+    background-size: 25px;
+    background-position: 7.5px;
+    background-repeat: no-repeat;
+}
+
+.canvas-area-controls-tool-line {
+    background-image: url(toolline.svg);
+}
+
+.canvas-area-controls-tool-rect {
+    background-image: url(toolrect.svg);
+}
+
+.canvas-area-controls-tool-circle {
+    background-image: url(toolcircle.svg);
+}
+
+.canvas-area-controls-tool-marker {
+    background-image: url(toolmarker.svg);
+}
+
+.canvas-area-controls-tool-eraser {
+    background-image: url(tooleraser.svg);
+}
+
+.canvas-area-controls-tool-fill {
+    background-image: url(toolfill.svg);
+}
+
+.canvas-area-controls-tool.active {
+    border: 2px solid #f00;
+    background-position: 5.5px;
+}
+
+body.dark .canvas-area-controls-tool.active {
+    border-color: #000;
+}
+
+@media only screen and (max-width: 800px) {
+    .wrapper {
+        padding: 15px;
+    }
+    .theme-switcher {
+        top: 5px;
+        left: 5px;
+        width: 50px;
+        height: 50px;
+    }
+    .game-page {
+        flex-direction: column;
+    }
+    .game-page-main {
+        padding: 0;
+    }
+    .game-page-sidebar {
+        width: 100%;
+        padding: 40px 0 15px 0;
+    }
+    .game-page-sidebar-main {
+        padding: 10px;
+    }
+    .game-page-sidebar-main>div {
+        width: 50%;
+        margin-bottom: 15px;
+    }
+    .canvas-area-layers-layer-delete, .canvas-area-layers-layer-move {
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .game-page-sidebar-main>div {
+        font-size: 75%;
+    }
+    .game-page-sidebar-main>div>button {
+        font-size: 85%;
+        padding: 5px 7px;
+    }
+}
